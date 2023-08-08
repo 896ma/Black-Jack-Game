@@ -3,11 +3,11 @@
 let firstCard=6
 var secondCard=21
 let hasblackjack=false
-let isAlive=true
+ let isAlive=true
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
 // 1. Declare a variable called message and assign its value to an empty string
-let message =""
+let message =""   
 
 // 2. Reassign the message variable to the string we're logging out
 
@@ -30,7 +30,7 @@ function renderGame(){
     }
     // else if exactly 21 -> "Wohoo! You've got Blackjack! "s
     else if(sum===21){
-        message=( " Wohoo! You've got Blackjack! ")
+        message=( " Wonderful! You've got Blackjack! ")
         hasblackjack=true
     }
     // else -> "You're out of the game! "
