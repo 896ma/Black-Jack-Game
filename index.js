@@ -53,3 +53,14 @@ function newCard(){
     // 3. Call startGame()
     renderGame()
 }
+
+//array manipulation (pushing new values to arrays and the displaying them)
+
+let messages =[  
+    "Hey , How's it going ",
+    "I'm great thank you",
+    "All good . Been working on my portfolio lately."
+]
+let newMessage ="Same Here!"
+messages.push(newMessage);
+console.log(messages)
