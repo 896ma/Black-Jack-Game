@@ -19,7 +19,15 @@ let sum =firstCard+secondCard
 //function  getRandomCard(), that always returns the number  5
 
 function getRandomCard (){
-    return  Math.floor(Math.random() * 13) +1
+    let randomNumber =  Math.floor(Math.random() * 13) +1
+    if (randomNumber>10){
+        return 10
+    }else if (randomNumber === 1){
+        return 11
+    }else {
+        return randomNumber
+    }
+
 }
 function startGame(){
     renderGame()
