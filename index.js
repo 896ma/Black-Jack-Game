@@ -1,7 +1,7 @@
 // 1. Create two variables, firstCard and secondCard. 
 // Set their values to a random number between 2-11
-let firstCard=6
-var secondCard=4
+let firstCard=getRandomCard()
+var secondCard=getRandomCard()
 //create an array of cards that contains the first card and the second card
 let cards =[firstCard,secondCard]
 let hasblackjack=false
@@ -15,6 +15,12 @@ let message =""
 
 let sum =firstCard+secondCard
 //Button that starts the game whenever clicked
+
+//function  getRandomCard(), that always returns the number  5
+
+function getRandomCard (){
+    return  Math.floor(Math.random() * 10)
+}
 function startGame(){
     renderGame()
 }
@@ -55,7 +61,7 @@ function newCard(){
     console.log("Loading a new card from the deck!")
     console.log("Drawing a new card from the deck!")
     // 1. Create a card variable, and hard code its value to a number (2-11)
-    let card = 7
+    let card = getRandomCard()
     // 2. Add the new card to the sum variable
     sum += card
     //push the new card to the crads array
