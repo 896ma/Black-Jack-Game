@@ -1,7 +1,7 @@
 // 1. Create two variables, firstCard and secondCard. 
 // Set their values to a random number between 2-11
 let firstCard=6
-var secondCard=21
+var secondCard=4
 //create an array of cards that contains the first card and the second card
 let cards =[firstCard,secondCard]
 let hasblackjack=false
@@ -25,7 +25,13 @@ let sumEl=document.getElementById("sum-el")
 let messageEl=document.getElementById("message-el")
 let cardsEl=document.getElementById("cards-el")
 function renderGame(){
-    cardsEl.textContent= "cards : " +cards[0]+ " " +cards[1]
+    cardsEl.textContent= "cards : " 
+
+    //create a for loop to render out all the cards instead of just one
+
+    for (let i=0; i<cards.length;i++){
+        cardsEl.textContent += cards[i] + " "
+    }
     sumEl.textContent= "sum : " + sum
     if(sum<=20){
         message=("Do you want to draw a new card? ")
