@@ -2,6 +2,8 @@
 // Set their values to a random number between 2-11
 let firstCard=6
 var secondCard=21
+//create an array of cards that contains the first card and the second card
+let cards =[firstCard,secondCard]
 let hasblackjack=false
  let isAlive=true
 // 2. Create a variable, sum, and set it to the sum of the two cards
@@ -23,7 +25,7 @@ let sumEl=document.getElementById("sum-el")
 let messageEl=document.getElementById("message-el")
 let cardsEl=document.getElementById("cards-el")
 function renderGame(){
-    cardsEl.textContent= "cards : " +firstCard + " " +secondCard
+    cardsEl.textContent= "cards : " +cards[0]+ " " +cards[1]
     sumEl.textContent= "sum : " + sum
     if(sum<=20){
         message=("Do you want to draw a new card? ")
@@ -50,17 +52,8 @@ function newCard(){
     let card = 7
     // 2. Add the new card to the sum variable
     sum += card
+    //push the new card to the crads array
+    cards.push(card);
     // 3. Call startGame()
     renderGame()
 }
-
-//array manipulation (pushing new values to arrays and the displaying them)
-
-let messages =[  
-    "Hey , How's it going ",
-    "I'm great thank you",
-    "All good . Been working on my portfolio lately."
-]
-let newMessage ="Same Here!"
-messages.push(newMessage);
-console.log(messages)
