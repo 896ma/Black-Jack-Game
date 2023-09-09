@@ -1,11 +1,10 @@
 // 1. Create two variables, firstCard and secondCard. 
 // Set their values to a random number between 2-11
-let firstCard=getRandomCard()
-var secondCard=getRandomCard()
+
 //create an array of cards that contains the first card and the second card
-let cards =[firstCard,secondCard]
+let cards =[]
 let hasblackjack=false
- let isAlive=true
+ let isAlive=false
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
 // 1. Declare a variable called message and assign its value to an empty string
@@ -13,7 +12,7 @@ let message =""
 
 // 2. Reassign the message variable to the string we're logging out
 
-let sum =firstCard+secondCard
+let sum =0
 //Button that starts the game whenever clicked
 
 //function  getRandomCard(), that always returns the number  5
@@ -30,6 +29,15 @@ function getRandomCard (){
 
 }
 function startGame(){
+     isAlive=true
+     //Generate two numbers
+     let firstCard=getRandomCard()
+     let secondCard=getRandomCard()
+
+    
+     cards =[firstCard,secondCard]
+     sum= firstCard+secondCard
+     //Re-assign the cards and sum variables so that the game can start
     renderGame()
 }
 // Write the conditional according to these rules:
