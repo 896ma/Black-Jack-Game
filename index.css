@@ -12,6 +12,7 @@ body {
     color: darkorange;
     font-weight: bolder;
     font-size: larger;
+    font-size: 26px;
 }
 #message-el{
     font-style: italic;
