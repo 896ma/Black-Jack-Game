@@ -46,6 +46,13 @@ function startGame(){
 let sumEl=document.getElementById("sum-el")
 let messageEl=document.getElementById("message-el")
 let cardsEl=document.getElementById("cards-el")
+let player ={
+    name: "Marvine" ,
+    chips : 150
+}
+let playerEl= document.getElementById("player-el")
+playerEl.textContent =player.name +": $" + player.chips
+
 function renderGame(){
     cardsEl.textContent= "cards : " 
 
@@ -74,14 +81,18 @@ function renderGame(){
     messageEl.textContent=message
 }
 function newCard(){
-    console.log("Loading a new card from the deck!")
-    console.log("Drawing a new card from the deck!")
-    // 1. Create a card variable, and hard code its value to a number (2-11)
-    let card = getRandomCard()
-    // 2. Add the new card to the sum variable
-    sum += card
-    //push the new card to the crads array
-    cards.push(card);
-    // 3. Call startGame()
-    renderGame()
+    //only allow the player to get a new card if she IS alive and does NOT  have a blackjack
+
+    if (isAlive==true && hasblackjack===false){
+// 1. Create a card variable, and hard code its value to a number (2-11)
+let card = getRandomCard()
+// 2. Add the new card to the sum variable
+sum += card
+//push the new card to the crads array
+cards.push(card);
+// 3. Call startGame()
+renderGame()
 }
+    }
+    
+    
