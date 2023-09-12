@@ -1,11 +1,10 @@
 // 1. Create two variables, firstCard and secondCard. 
 // Set their values to a random number between 2-11
-let firstCard=6
-var secondCard=4
+
 //create an array of cards that contains the first card and the second card
-let cards =[firstCard,secondCard]
+let cards =[]
 let hasblackjack=false
- let isAlive=true
+ let isAlive=false
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
 // 1. Declare a variable called message and assign its value to an empty string
@@ -13,9 +12,32 @@ let message =""
 
 // 2. Reassign the message variable to the string we're logging out
 
-let sum =firstCard+secondCard
+let sum =0
 //Button that starts the game whenever clicked
+
+//function  getRandomCard(), that always returns the number  5
+
+function getRandomCard (){
+    let randomNumber =  Math.floor(Math.random() * 13) +1
+    if (randomNumber>10){
+        return 10
+    }else if (randomNumber === 1){
+        return 11
+    }else {
+        return randomNumber
+    }
+
+}
 function startGame(){
+     isAlive=true
+     //Generate two numbers
+     let firstCard=getRandomCard()
+     let secondCard=getRandomCard()
+
+    
+     cards =[firstCard,secondCard]
+     sum= firstCard+secondCard
+     //Re-assign the cards and sum variables so that the game can start
     renderGame()
 }
 // Write the conditional according to these rules:
@@ -24,6 +46,13 @@ function startGame(){
 let sumEl=document.getElementById("sum-el")
 let messageEl=document.getElementById("message-el")
 let cardsEl=document.getElementById("cards-el")
+let player ={
+    name: "Marvine" ,
+    chips : 150
+}
+let playerEl= document.getElementById("player-el")
+playerEl.textContent =player.name +": $" + player.chips
+
 function renderGame(){
     cardsEl.textContent= "cards : " 
 
@@ -52,14 +81,18 @@ function renderGame(){
     messageEl.textContent=message
 }
 function newCard(){
-    console.log("Loading a new card from the deck!")
-    console.log("Drawing a new card from the deck!")
-    // 1. Create a card variable, and hard code its value to a number (2-11)
-    let card = 7
-    // 2. Add the new card to the sum variable
-    sum += card
-    //push the new card to the crads array
-    cards.push(card);
-    // 3. Call startGame()
-    renderGame()
+    //only allow the player to get a new card if she IS alive and does NOT  have a blackjack
+
+    if (isAlive==true && hasblackjack===false){
+// 1. Create a card variable, and hard code its value to a number (2-11)
+let card = getRandomCard()
+// 2. Add the new card to the sum variable
+sum += card
+//push the new card to the crads array
+cards.push(card);
+// 3. Call startGame()
+renderGame()
 }
+    }
+    
+    

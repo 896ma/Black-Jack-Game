@@ -1,22 +1,24 @@
 h1{
     color:darkred;
     text-align: center;
-    margin-top: 7%;
+    margin-top: 4%;
+    font-size: 55px;
 }
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("images.jpeg");
+    background-image: url("image.avif");
     background-size: cover;
     text-align: center;
-    color: white;
+    color: darkgreen;
     font-weight: bolder;
     font-size: larger;
+    font-size: 26px;
 }
 #message-el{
     font-style: italic;
 }
 button{
-    color:#016f32;
+    color:darkred;
     width : 160px;
     background :goldenrod;
     font-weight: bolder;
@@ -24,6 +26,7 @@ button{
     padding-bottom: 5px;
     border:none;
     font-size: 19px;
-    border-radius: 2px;
+    border-radius: 6px;
     margin-bottom: 4px;
+    
 }
