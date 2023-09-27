@@ -8,11 +8,11 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-image: url("image.avif");
     background-size: cover;
-    text-align: center
+    text-align: center;
     color: darkgreen;
     font-weight: bolder;
     font-size: larger;
-    font-size: 26px;
+    font-size: 26px
 }
 #message-el{
     font-style: italic;
