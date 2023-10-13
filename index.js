@@ -7,7 +7,7 @@ let hasblackjack=false
  let isAlive=false
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
-// 1. Declare a variable called message and assign its value to an empty stri
+// 1. Declare a variable called message and assign its value to an empty str
 let message =""   
 
 // 2. Reassign the message variable to the string we're logging out
