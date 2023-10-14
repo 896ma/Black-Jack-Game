@@ -67,7 +67,7 @@ function renderGame(){
     }
     // else if exactly 21 -> "Wohoo! You've got Blackjack! "s
     else if(sum===21){
-        message=( " Wonderful! You've got Blackjack! ")
+        message=( " Wonderful! You've got Blackjack:)")
         hasblackjack=true
     }
     // else -> "You're out of the game! "
