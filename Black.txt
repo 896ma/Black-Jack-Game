@@ -1,0 +1,50 @@
+
+JS-App Documentation: Blackjack Game
+Table of Contents
+Introduction
+Features
+Getting Started
+Prerequisites
+Installation
+Usage
+Game Rules
+Controls
+Code Structure
+Dependencies
+Contributing
+License
+1. Introduction
+Welcome to JS-App, a JavaScript, HTML, and CSS-based Blackjack game that provides users with an interactive and visually appealing gaming experience. The game allows users to select two random cards, compares their sum against the blackjack value (21), and provides feedback to the user in the console. The game continues as long as the player's total is below 21 (isAlive is true). If the player surpasses 21, the game ends with instructions on how to restart.
+
+2. Features
+Random Card Selection: The game starts by selecting two random cards for the player.
+Sum Comparison: The sum of the selected cards is compared against the blackjack value (21).
+Interactive Console Output: Relevant information and game updates are displayed in the console for a seamless gaming experience.
+User-friendly GUI: The game provides a visually appealing and easy-to-understand graphical user interface for players.
+3. Getting Started
+Prerequisites
+Web browser with JavaScript enabled.
+A code editor (e.g., Visual Studio Code, Sublime Text).
+Installation
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/your-username/JS-App.git
+Open the index.html file in your preferred web browser.
+4. Usage
+Game Rules
+The game starts with the player being dealt two random cards.
+The player's goal is to achieve a card sum as close to 21 as possible without exceeding it.
+The game continues as long as the player's total is below 21 (isAlive is true).
+If the player's total exceeds 21, the game ends, and instructions on how to restart are provided.
+Controls
+Press the "Start" button to draw another card and continue the game.
+5. Code Structure
+index.html: HTML file containing the structure of the game, including buttons and display elements.
+style.css: CSS file for styling the graphical user interface.
+script.js: JavaScript file containing the game logic, card selection, sum comparison, and console output.
+6. Dependencies
+No external dependencies are required to run this game.
+
+7. Contributing
+If you'd like to contribute to the project, please follow the standard GitHub pull request process.
